@@ -35,10 +35,22 @@ namespace Cwiczenie_punkt1
         {
             wspY = wspY - przesunY;
         }
-        /*public static Punkt operator +(Punkt MojPunkt1, Punkt MojPunkt2)
+        public static Punkt operator +(Punkt MojPunkt1, Punkt MojPunkt2)
         {
-            return new Punkt(MojPunkt1.xWsp + MojPunkt2.xWsp); 
-        }*/
+            Punkt punktWynikowy = new Punkt(MojPunkt1.wspX + MojPunkt2.wspX, MojPunkt1.wspY+MojPunkt2.wspY);
+            return punktWynikowy; 
+        }
+        public static bool PorownajWspolrzednePunktow(Punkt MojPunkt1, Punkt MojPunkt2)
+        {
+            if (MojPunkt1.wspX == MojPunkt2.wspX && MojPunkt1.wspY==MojPunkt2.wspY )
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
         
 
     }

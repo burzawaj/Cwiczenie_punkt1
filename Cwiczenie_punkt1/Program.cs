@@ -10,16 +10,21 @@ namespace Cwiczenie_punkt1
     {
         static void Main(string[] args)
         {
-            Punkt nowyPunkt = new Punkt(0, 0);
+            bool wynikPorownaniaPunktow = true;
+            Punkt nowyPunkt = new Punkt(-1, -1);
 
             Console.WriteLine("Współrzędna X: {0}", nowyPunkt.WSPX);
             Console.WriteLine("Współrzędna Y: {0}", nowyPunkt.WSPY);
 
-            Punkt nowyPunkt2 = new Punkt(1, 1);
+            Punkt nowyPunkt2 = new Punkt(-1, -1);
             Console.WriteLine("Współrzędna X1: {0}", nowyPunkt2.WSPX);
             Console.WriteLine("Współrzędna Y1: {0}", nowyPunkt2.WSPY);
-            
-            
+
+            wynikPorownaniaPunktow = Punkt.PorownajWspolrzednePunktow(nowyPunkt, nowyPunkt2);  //(nowyPunkt, nowyPunkt2);
+            Console.WriteLine(wynikPorownaniaPunktow);
+            Punkt sumaP1P2 = nowyPunkt + nowyPunkt2;
+            Console.WriteLine("Współrzędna punktu po zsumowaniu: X:{0}, Y:{1}", sumaP1P2.WSPX,sumaP1P2.WSPY);
+
 
 
             /*nowyPunkt.PrzesunWGore(5);
